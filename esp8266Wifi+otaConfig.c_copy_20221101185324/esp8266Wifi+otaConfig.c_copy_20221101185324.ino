@@ -3,7 +3,8 @@
 #include <ESP8266WebServer.h>
 #include <ArduinoOTA.h>
 
-//dados de acesso para o modulo esp8266
+// Configuration for fallback access point 
+// if Wi-Fi connection fails.
 const char * AP_ssid = "ESP8266";
 const char * AP_password = "qwerty12345";
 IPAddress AP_IP = IPAddress(10,1,1,1);
@@ -17,7 +18,7 @@ struct WifiConf {
   // Make sure that there is a 0 
   // that terminatnes the c string
   // if memory is not initalized yet.
-  char cstr_terminator = 0; // make sure
+  char cstr_terminator = 0; // makse sure
 };
 WifiConf wifiConf;
 
@@ -96,7 +97,6 @@ void setUpWebServer() {
   server.begin();
 }
 
-//Pega nome da rede e senha a se conectar
 void handleWebServerRequest() {
   bool save = false;
 
