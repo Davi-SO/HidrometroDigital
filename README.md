@@ -1,2 +1,2 @@
 # HidrometroDigital
-Código para hidrômetro digital usando esp8266
+Código para hidrômetro digital usando esp32
